@@ -30,7 +30,7 @@ const Home = () => {
       <div className="h-full w-full max-w-[1750px] flex">
         <div className="flex items-center justify-center flex-col sm:w-2/4 w-full gap-4 px-4">
           <div className="flex items-center justify-center flex-col gap-2 w-4/5 sm:w-full">
-            <h1 className="font-bold text-4xl 2xl:text-5xl">WHISPER</h1>
+            <h1 className="font-bold text-4xl 2xl:text-5xl">Chat Randomly</h1>
             <p className="font-medium text-2xl text-center 2xl:text-3xl">
               Chat anonymously and safely with people for free
             </p>
