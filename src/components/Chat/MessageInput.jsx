@@ -7,7 +7,7 @@ import EmojiPicker from '../EmojiPicker';
 import useKeyPress, { ShortcutFlags } from 'src/hooks/useKeyPress';
 
 import { socket } from 'src/lib/socketConnection';
-import { NEW_EVENT_SEND_FAILED } from '../../../../constants.json';
+import { NEW_EVENT_SEND_FAILED } from '../../../constants.json';
 import { useChat } from 'src/context/ChatContext';
 import { useAuth } from 'src/context/AuthContext';
 
@@ -97,7 +97,13 @@ const MessageInput = ({
 							onChange={handleTypingStatus}
 							disabled={isTextAreaDisabled} // Disable textarea based on the state
 						/>
-						<EmojiPicker onEmojiPick={setMessage} focusInput={() => inputRef.current.focus()} />
+						<br />
+						
+						<EmojiPicker onEmojiPick={setMessage} focusInput={
+							() => 
+						inputRef.current.focus()
+
+						} />
 						{editing.isediting && (
 							<ImCancelCircle
 								onClick={cancelEdit}

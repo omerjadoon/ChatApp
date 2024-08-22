@@ -8,7 +8,7 @@ import {
 	NEW_EVENT_EDIT_MESSAGE,
 	NEW_EVENT_RECEIVE_MESSAGE,
 	NEW_EVENT_ONLINE_STATUS,
-} from '../../../constants.json';
+} from '../../constants.json';
 // Rsuite
 import { Dropdown, IconButton, Tooltip, Whisper } from 'rsuite';
 import { Icon } from '@rsuite/icons';

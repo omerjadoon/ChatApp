@@ -22,7 +22,7 @@ import {
 	NEW_EVENT_JOINED,
 	NEW_EVENT_STOP_SEARCH,
 	NEW_EVENT_STOP_SEARCH_SUCCESS,
-} from '../../../constants.json';
+} from '../../constants.json';
 
 const stoppingSearchLoadingText = <p>Stopping the search</p>;
 const BuddyMatcher = () => {

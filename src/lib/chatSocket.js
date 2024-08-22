@@ -6,7 +6,7 @@ import {
 	NEW_EVENT_EDIT_MESSAGE,
 	NEW_EVENT_SEND_MESSAGE,
 	NEW_EVENT_READ_MESSAGE,
-} from '../../../constants.json';
+} from '../../constants.json';
 
 /**
  *

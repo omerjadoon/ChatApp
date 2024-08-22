@@ -8,7 +8,7 @@ import {
 	NEW_EVENT_RECEIVE_MESSAGE,
 	NEW_EVENT_SEND_FAILED,
 	NEW_EVENT_TYPING,
-} from '../../../constants.json';
+} from '../../constants.json';
 import chatHelper, {
 	adjustTextareaHeight,
 	arrayBufferToBase64,
