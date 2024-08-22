@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Login from './Login';
 import { useAuth } from 'src/context/AuthContext';
+import { Analytics } from '@vercel/analytics/react';
 
 const userID = Math.random().toFixed(12).toString(36).slice(2);
 
@@ -56,6 +57,7 @@ const Home = () => {
         <div className="h-full bg-secondary w-2/4 sm:flex hidden items-center justify-center px-4">
           <img src="/landing page image.jpg" className="h-auto rounded-full w-auto object-cover" />
         </div>
+        <Analytics />
       </div>
     </div>
   );
