@@ -1,9 +1,38 @@
+version: '3.8'
+
 services:
-    mongo:
-        image: mongo:5.0
-        restart: always
-        ports:
-            - 27018:27017
-        environment:
-            MONGO_INITDB_ROOT_USERNAME: username
-            MONGO_INITDB_ROOT_PASSWORD: password
+  client:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+    ports:
+      - "3001:3000" # Adjust if the client runs on a different port
+    depends_on:
+      - server
+
+  server:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    ports:
+      - "3100:3100" # Adjust if the server runs on a different port
+    environment:
+      - MONGO_URL=mongodb://username:password@mongo:27017/yourdbname
+    depends_on:
+      - mongo
+    volumes:
+      - ./server:/usr/src/app
+
+  mongo:
+    image: mongo:5.0
+    restart: always
+    ports:
+      - "27018:27017" # Expose MongoDB on port 27018
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: jadoon
+      MONGO_INITDB_ROOT_PASSWORD: jadoon$123
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
