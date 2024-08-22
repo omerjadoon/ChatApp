@@ -14,6 +14,7 @@ import Start from 'pages/Start';
 import { useApp } from 'src/context/AppContext';
 import { useAuth } from 'context/AuthContext';
 import useIsTabActive from './hooks/useIsTabActive';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   ReactGA.initialize(import.meta.env.VITE_GOOGLE_ANALYTICS);
@@ -46,6 +47,7 @@ function App() {
 
     <div className={`flex flex-col-reverse md:flex-row h-screen ${settings.theme && 'dark'}`}>
       {isLoggedIn && <NavBar />}
+      <Analytics />
       <Routes>
         <Route exact path="/" element={<ProtectedRoutes isLoggedIn={isLoggedIn} />}>
           <Route exact path="/" element={<Start />} />
