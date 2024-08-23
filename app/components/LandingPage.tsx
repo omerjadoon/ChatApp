@@ -25,14 +25,14 @@ const LandingPage = (props: Props) => {
 
         {/* Title */}
         <h1 className="text-lg md:text-xl font-semibold mb-3 md:mb-6 text-white text-center">
-          Welcome to AnyCall
+          Welcome to Chat Randomly
         </h1>
       </div>
       <div className="h-[57vh] flex justify-center items-center">
         {isChecked ? <PeerRoomLanding /> : <GroupLanding />}
       </div>
       <p className="text-xs md:text-sm text-gray-500 mt-1 md:mt-2 text-center">
-        By using AnyCall, you accept the terms & conditions.
+        By using Chat Randomly, you accept the terms & conditions.
       </p>
       <div className="my-4 w-full flex justify-center pt-4">
         <div className="glassmorphism-card w-fit p-1">
